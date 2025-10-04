@@ -1,0 +1,104 @@
+<!Doctype html>
+<head>
+	<title>Belajar Html, CSS, dan Javascript</title>
+	
+<body>
+	<input type="text" id="search" placeholder="Search. . .">
+	<button id="btn1" onclick="search()" onmouseover="ubahText()" onmouseout="oriText()">Search</button>
+	<button class="btn2" onclick="window.print()">Print this page</button>
+	<p id="output"></p>
+	<div class="wrapper">
+		<div class="header">
+			</div>
+		<center><h1><marquee>Daftar Film</marquee></h1></center>
+		<link rel="stylesheet"  href="style.css"/>
+		<div class="title-header">
+		<h2>Daftar Film di Empire XXI</h2>
+		</div>
+		<table border="2"width="px">
+			<thead>
+				<tr>
+					<th>Poster</th>
+					<th width="200 px">Judul Film</th>
+					<th width="200px">Jam Tayang </th>
+					<th width="200px">Harga Tiket </th>
+				</tr>
+			</thead>
+			</tbody>
+				<tr>
+				<td><img src="atm.jpg" width="200" height"200" /></td>
+				<td>ATM ERROR</td>
+				<td>
+					<li>11.00</li>
+					<li>13.00</li>
+					<li>15.00</li>
+					<li>17.00</li>
+				</td>
+				<td>
+					<li>Senin-Kamis:25.000</li>
+					<li>Jumat:30.000</li>
+					<li>Sabtu-Minggu:35.000</l
+				</td>
+			</tr>
+			<tr>
+			<td><img src="school.jpg" width="150" height="100" /></td>
+				<td>SCHOOL</td>
+				<td>
+					<li>11.00</li>
+					<li>13.00</li>
+					<li>15.00</li>
+					<li>17.00</li>
+				</td>
+				<td>
+					<li>Senin-Kamis:25.000</li>
+					<li>Jumat:30.000</li>
+					<li>Sabtu-Minggu:35.000</li>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="footer">
+	<center>Bariklymazidah C3318110007 &copy:2021</center>
+	</div>
+	
+	<h3 align="center">Jam Digital Keren:</h3>
+	<dt>
+		<p id="jam">17</p>
+		<p id="menit">15</p>
+		<p id="detik">30</p>
+	</dt>
+	<script type="text/javascript" >
+	
+		window.setTimeout("waktu()", 1000);
+		
+		function waktu(){
+			var waktu = new Date();
+			setTimeout("waktu()", 1000);
+			document.getElementById("jam").innerHTML = waktu.getHours();
+			document.getElementById("menit").innerHTML = waktu.getMinutes();
+			document.getElementById("detik").innerHTML = waktu.getSeconds();
+		}
+		
+		document.title = 'Belajar Html, CSS, dan Javascript';
+		const body = document.body;
+		const btn1 = document.getElementById('btn1');
+		const btn = document.querySelector('button');
+		
+		console.log(btn)
+		
+		function search(){
+			btn1.style.background = 'aqua';
+			const newText = document.createElement('p')
+			newText.textContent = "HALO BUNG! APAKABAR"
+			body.append(newText)
+		}
+		
+		function ubahText(){
+			btn1.textContent = 'hihihi haha'
+		}
+		function oriText(){
+			btn1.textContent = 'Search'
+		}
+	</script>
+</body>
+</html>
